@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+/*Containers*/
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto;
+    background-image: url('images/bg-pattern-bottom-desktop.svg'), url('images/bg-pattern-top-desktop.svg');  
+}
+.intro{
+    display: grid;
+    grid-template-columns:32em 32em;
+    padding: 4em;
+    line-height: 1.5em;
+    align-items: center;
+}
+.rating{
+    display: grid;
+    grid-gap: 25px;
+    max-width: 50vw;
+    color: hsl(300, 43%, 22%);
+    text-align: center;
+}
+.info-header{
+    display: grid;
+    grid-gap: 4em;
+    padding-right: 10em;
+}
+.buyers{
+    display: grid;
+    grid-template-columns:20em 20em 20em;
+    grid-gap: 2em;
+}
+.name-verified{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+/*End of containers*/
+
+/*Header info and ratings*/
+.rev{
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 0.5em;
+    padding: 1.3em;
+    
+}
+.guru{
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 0.5em;
+    padding: 1.3em;
+}
+.tech{
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 0.5em;
+    padding: 1.3em;
+}
+
+/*End of header infor and ratings*/
+
+/*Reviews Section*/
+.smith{
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 0.8em;
+    padding:1.5em;
+}
+.roberts{
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 0.8em;
+    padding:1.5em;
+}
+.wallace{
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 0.8em;
+    padding:1.5em;
+}
+.username{
+    display: flex;
+}
+.verified{
+    color: hsl(333, 80%, 67%);
+}
+.name{
+    color: hsl(0, 0%, 100%);
+}
+.reviews{
+    color: hsl(300, 24%, 96%);
+}
+.info{
+    color: hsl(303, 10%, 53%);
+}
+.header{
+    color:hsl(300, 43%, 22%)
+}
+.buyers img{
+    border-radius: 50%;
+}
+
+/*End of reviews8*/
+
+/*media query for smaller devices*/
+@media only screen and (max-width:700px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+    }
+    .info-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: none;
+    }
+    .buyers{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        max-width:min-content;
+    }
+    .rating{
+        display: grid;
+        max-width: 100%;
+    }
+    span{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        
+    }
+    
+}
+/*End of media query*/
+/*footer*/
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
