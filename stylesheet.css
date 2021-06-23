@@ -2,12 +2,11 @@
     box-sizing: border-box;
     margin: 0;
 }
-/*Containers*/
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto;
+   
     Font-size: 15px;
     font-family: 'Spartan', sans-serif;
     font-weight: 400,500,700;
@@ -16,22 +15,29 @@ body{
     background-repeat: no-repeat,no-repeat;
 }
 .intro{
-    display: grid;
+    display: flex;
+    justify-content: space-evenly;
+    
+    /*display: grid;
     grid-template-columns:32em 32em;
     padding: 2em;
     line-height: 1.5em;
-    align-items: center;
+    align-items: center;*/
 }
 .rating{
     display: flex;
     flex-direction: column;
-    grid-gap: 25px;
-    color: hsl(300, 43%, 22%);
-    text-align: center;
+    grid-gap: 2em;
+    justify-content: space-between;
+    margin: auto;
+    
 }
 .info-header{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1.8em;
+    width: 30vw;
 }
 .buyers{
     display: grid;
@@ -42,63 +48,65 @@ body{
     display: flex;
     flex-direction: column;
     padding: 2em;
+    justify-content: space-between;
 }
-/*End of containers*/
-
-/*Header info and ratings*/
 .rev{
     display: inline-flex;
     justify-content: space-evenly;
     background-color: hsl(300, 24%, 96%);
     border-radius: 0.5em;
-    padding: 1.3em;   
+    width: 400px;
+    padding: 1.3em;  
 }
 .guru{
     display: inline-flex;
-    padding: 1.3em;
     justify-content: space-evenly;
-    
     background-color: hsl(300, 24%, 96%);
     border-radius: 0.5em;
-    
+    width: 400px;
+    padding: 1.3em;  
+    margin-left: 5em;
 }
 .tech{
     display: inline-flex;
     justify-content: space-evenly;
     background-color: hsl(300, 24%, 96%);
     border-radius: 0.5em;
-    padding: 1.3em;
+    width: 400px;
+    padding: 1.3em;  
+    margin-left: 10em;
 }
 .Star{
     display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    
+    justify-content: space-evenly;
+    align-items: center;    
 }
 .rate{
     padding: 0.5em;
 }
-
-/*End of header infor and ratings*/
-
-/*Reviews Section*/
 .smith{
     background-color: hsl(300, 43%, 22%);
     border-radius: 0.8em;
     padding:1.5em;
+    margin: auto;
 }
 .roberts{
     background-color: hsl(300, 43%, 22%);
     border-radius: 0.8em;
     padding:1.5em;
+    margin: auto;
+    margin-top: 50px;
 }
 .wallace{
     background-color: hsl(300, 43%, 22%);
     border-radius: 0.8em;
     padding:1.5em;
+    margin: auto;
+    margin-top: 80px;
 }
 .username{
     display: flex;
+    align-items: center;
 }
 .verified{
     color: hsl(333, 80%, 67%);
@@ -112,18 +120,18 @@ body{
 .info{
     color: hsl(303, 10%, 53%);
     padding: 2em;
+    font-size: 0.8em;
+    margin-top: 0.6em;
 }
 .header{
     color:hsl(300, 43%, 22%);
+    margin: 0;
+    font-size:3em;
     line-height: 1.1em;
 }
 .buyers img{
     border-radius: 50%;
 }
-
-/*End of reviews8*/
-
-/*media query for smaller devices*/
 @media only screen and (max-width:900px) {
     body{
         display: flex;
@@ -139,8 +147,6 @@ body{
     .intro{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin: auto;
         padding: 4em;
     }
@@ -148,37 +154,48 @@ body{
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 2em;
+        justify-content: center;
+        margin: auto;
+    }
+    .buyers{
+        display: grid;
+        grid-template-columns: 80%;
+        grid-gap: 1em;
+        justify-content: center;
     }
     
-    .buyers{
+    .rating{
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: auto;
-        max-width:min-content;
     }
     .rev{
         display: flex;
         flex-direction: column;
-        
         padding: 2em;
-
+        width: 100%;
     }
     .guru{
         display: flex;
         flex-direction: column;
-        
         padding: 2em;
+        margin-left: 0;
+        width: 100%;
     }
     .tech{
         display: flex;
         flex-direction: column;
         padding: 2em;
+        margin-left: 0;
+        width: 100%;
+    }
+    .Star{
+        display: inline-flex;
+        justify-content: space-evenly;
     }
     
 }
-/*End of media query*/
 /*footer*/
 .attribution {
     font-size: 11px;
