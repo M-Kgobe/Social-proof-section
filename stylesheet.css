@@ -7,28 +7,31 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin: auto;
-    background-image: url('images/bg-pattern-bottom-desktop.svg'), url('images/bg-pattern-top-desktop.svg');  
+    Font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400,500,700;
+    background-image: url('images/bg-pattern-bottom-desktop.svg'), url('images/bg-pattern-top-desktop.svg');
+    background-position: bottom right, top left;
+    background-repeat: no-repeat,no-repeat;
 }
 .intro{
     display: grid;
     grid-template-columns:32em 32em;
-    padding: 4em;
+    padding: 2em;
     line-height: 1.5em;
     align-items: center;
 }
 .rating{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-gap: 25px;
-    max-width: 50vw;
     color: hsl(300, 43%, 22%);
     text-align: center;
 }
 .info-header{
-    display: grid;
-    grid-gap: 4em;
-    padding-right: 10em;
+    display: flex;
+    flex-direction: column;
 }
 .buyers{
     display: grid;
@@ -44,20 +47,29 @@ body{
 
 /*Header info and ratings*/
 .rev{
+    display: inline-flex;
+    justify-content: space-evenly;
     background-color: hsl(300, 24%, 96%);
     border-radius: 0.5em;
-    padding: 1.3em;
-    
+    padding: 1.3em;   
 }
 .guru{
+    
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 0.5em;
+    
+}
+.tech{
+    display: inline-flex;
+    justify-content: space-evenly;
     background-color: hsl(300, 24%, 96%);
     border-radius: 0.5em;
     padding: 1.3em;
 }
-.tech{
-    background-color: hsl(300, 24%, 96%);
-    border-radius: 0.5em;
-    padding: 1.3em;
+.Star{
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /*End of header infor and ratings*/
@@ -92,9 +104,11 @@ body{
 }
 .info{
     color: hsl(303, 10%, 53%);
+    padding: 2em;
 }
 .header{
-    color:hsl(300, 43%, 22%)
+    color:hsl(300, 43%, 22%);
+    line-height: 1.1em;
 }
 .buyers img{
     border-radius: 50%;
@@ -103,29 +117,32 @@ body{
 /*End of reviews8*/
 
 /*media query for smaller devices*/
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:900px) {
     body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-content: center;
         text-align: center;
         margin: auto;
+        background-image: url('images/bg-pattern-top-mobile.svg'),url('images/bg-pattern-bottom-mobile.svg');
+        background-position: top left,bottom right;
+        background-repeat: no-repeat,no-repeat;
     }
     .intro{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-    }
-    .info-header{
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: none;
+        margin: auto;
+        padding: 4em;
     }
+    .info-header{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+    }
+    
     .buyers{
         display: flex;
         flex-direction: column;
@@ -134,14 +151,25 @@ body{
         margin: auto;
         max-width:min-content;
     }
-    .rating{
-        display: grid;
-        max-width: 100%;
+    
+    .rev{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        padding: 2em;
+
     }
-    span{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    .guru{
+        display: flex;
+        flex-direction: column;
         
+        padding: 2em;
+    }
+    .tech{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        padding: 2em;
     }
     
 }
