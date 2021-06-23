@@ -54,6 +54,9 @@ body{
     padding: 1.3em;   
 }
 .guru{
+    display: inline-flex;
+    padding: 1.3em;
+    justify-content: space-evenly;
     
     background-color: hsl(300, 24%, 96%);
     border-radius: 0.5em;
@@ -68,8 +71,12 @@ body{
 }
 .Star{
     display: inline-flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    
+}
+.rate{
+    padding: 0.5em;
 }
 
 /*End of header infor and ratings*/
@@ -151,11 +158,10 @@ body{
         margin: auto;
         max-width:min-content;
     }
-    
     .rev{
         display: flex;
         flex-direction: column;
-        width: fit-content;
+        
         padding: 2em;
 
     }
@@ -168,7 +174,6 @@ body{
     .tech{
         display: flex;
         flex-direction: column;
-        width: fit-content;
         padding: 2em;
     }
     
